@@ -1,0 +1,12 @@
+import urllib.request
+
+def download_image(url, path, name):
+    fullpath = path + name + ".jpg"
+    urllib.request.urlretrieve(url, fullpath)
+    
+
+url = input("Enter the URL of the image to be downloaded: ")
+
+name = input("Enter what you would like the file to be called: ")
+
+download_image(url, "images/", name)
